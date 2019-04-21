@@ -1,5 +1,5 @@
 [package]
-authors = ["The RustWasm Developers"]
+authors = ["Sarah Allen", "The RustWasm Developers"]
 categories = ["wasm"]
 description = "My super awesome Rust, WebAssembly, and Parcel project!"
 license = "Apache-2.0/MIT"
@@ -27,15 +27,5 @@ console_error_panic_hook = { version = "0.1.5", optional = true }
 # (tested with rust v1.31.1).
 wee_alloc = { version = "0.4.2", optional = true }
 
-# [dependencies.web-sys]
-# version = "0.3.6"
-# features = [
-#   'Document',
-#   'Element',
-#   'HtmlElement',
-#   'Node',
-#   'Window',
-# ]
-
-# [features]
-# default = ["console_error_panic_hook"]
+[features]
+default = ["console_error_panic_hook"]
