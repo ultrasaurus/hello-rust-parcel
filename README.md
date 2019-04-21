@@ -9,6 +9,16 @@
 
 npm run build
 
+slimmed down w/o web_sys and console.log
+```
+dist/js.3f076ec7.js.map               7.8 KB     12ms
+dist/js.3f076ec7.js                   4.4 KB    3.60s
+dist/Cargo.ab096783.toml             1.19 KB    3.01s
+dist/rust_parcel_bg.c48a31f5.wasm      770 B     11ms
+dist/index.html                        228 B      9ms
+```
+
+size of initial template
 ```
 dist/rust_parcel_bg.39e6da81.wasm    50.37 KB     16ms
 dist/js.b57570e6.js.map              14.49 KB      7ms
