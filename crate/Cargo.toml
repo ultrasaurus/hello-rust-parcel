@@ -26,6 +26,7 @@ console_error_panic_hook = { version = "0.1.5", optional = true }
 # allocator, however. Also as of wee_alloc v0.4.2, does not yet work on stable
 # (tested with rust v1.31.1).
 wee_alloc = { version = "0.4.2", optional = true }
+js-sys = "0.3.19"
 
 [features]
 default = ["console_error_panic_hook"]
