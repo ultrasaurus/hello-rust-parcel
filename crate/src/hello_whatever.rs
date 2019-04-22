@@ -7,9 +7,6 @@ use wasm_bindgen::prelude::*;
 use set_panic_hook;
 use std::collections::HashMap;
 
-// use serde_derive::Serialize;
-// use serde::{Serialize, Serializer};
-
 #[derive(Serialize)]
 pub struct BookStoreData {
     pub h: HashMap<String, String>,

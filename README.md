@@ -1,3 +1,52 @@
+
+
+Using wasm_bindgen with serde, I'm trying to return a JsValue for a complex structure using idomatic rust.  I've created an isolated example to illustrate the error that I'm seeing.
+
+struct declaration:
+```
+#[derive(Serialize)]
+pub struct BookStoreData {
+    pub h: HashMap<String, String>,
+    pub name: String,
+}
+```
+
+function definition:
+```
+#[wasm_bindgen]
+pub fn hello_hash(count: i32) -> Result<JsValue, JsValue> {
+    set_panic_hook();
+    let mut book_reviews = HashMap::new();
+
+    book_reviews.insert(
+        "Grimms' Fairy Tales".to_string(),
+        "Masterpiece.".to_string(),
+    );
+    let data = BookStoreData {
+        h: book_reviews,
+        name: "My Book Store".to_string(),
+    };
+
+    let js_result: JsValue = JsValue::from_serde(&data).unwrap();
+
+    OK(js_result)    
+
+}
+```
+
+I get this compilation error: 
+```
+error[E0425]: cannot find function `OK` in this scope
+  --> src/hello_whatever.rs:46:5
+   |
+46 |     OK(js_result)    
+   |     ^^ help: a tuple variant with a similar name exists: `Ok`
+```
+
+You can download the[full example](https://github.com/ultrasaurus/hello-rust-parcel/tree/ok-error) based on `rust-parcel-template` to see the error, simply run `npm run start` or `cd crate && cargo build` 
+
+
+
 ## Dev 
 
 * `npm run start` -- Serve the project locally for
