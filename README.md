@@ -37,10 +37,6 @@ cargo install wasm-pack
 
 Created using `rust-parcel-template`
 
-
-
-## Using This Template
-
 ```sh
 cargo install wasm-pack
 ```
@@ -49,3 +45,8 @@ cargo install wasm-pack
 npm init rust-parcel hello-rust-parcel
 cd hello-rust-parcel
 ```
+
+
+## References
+
+https://rustwasm.github.io/docs/wasm-bindgen/reference/iterating-over-js-values.html
