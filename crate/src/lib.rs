@@ -1,10 +1,17 @@
 #[macro_use]
 extern crate cfg_if;
 
+// #[macro_use]
+// extern crate serde;
+
+#[macro_use]
+extern crate serde_derive;
+
 extern crate wasm_bindgen;
 
 mod hello;
 mod hello_array;
+mod hello_whatever;
 
 cfg_if! {
     // When the `console_error_panic_hook` feature is enabled, we can call the
