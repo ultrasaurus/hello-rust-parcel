@@ -1,4 +1,5 @@
-
+NOTE: this branch doesn't work
+https://stackoverflow.com/questions/55800693/how-do-i-return-a-result-with-jsvalue-with-wasm-bindgen
 
 Using wasm_bindgen with serde, I'm trying to return a JsValue for a complex structure using idomatic rust.  I've created an isolated example to illustrate the error that I'm seeing.
 
@@ -43,7 +44,9 @@ error[E0425]: cannot find function `OK` in this scope
    |     ^^ help: a tuple variant with a similar name exists: `Ok`
 ```
 
-You can download the[full example](https://github.com/ultrasaurus/hello-rust-parcel/tree/ok-error) based on `rust-parcel-template` to see the error, simply run `npm run start` or `cd crate && cargo build` 
+You can see the[full example](https://github.com/ultrasaurus/hello-rust-parcel/tree/ok-error) based on [rust-parcel-template](https://github.com/rustwasm/rust-parcel-template)
+
+To reproduce the the error, from the root of the repo, run `npm run start` or `cd crate && cargo build` 
 
 
 
