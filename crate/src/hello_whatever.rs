@@ -17,8 +17,7 @@ pub struct BookStoreData {
 }
 
 #[wasm_bindgen]
-// pub fn hello_hash(count: i32) -> Result<JsValue, JsValue> {
-pub fn hello_hash(count: i32) -> JsValue {
+pub fn hello_hash(count: i32) -> Result<JsValue, JsValue> {
     set_panic_hook();
     // https://doc.rust-lang.org/std/collections/struct.HashMap.html
     let mut book_reviews = HashMap::new();
@@ -44,10 +43,7 @@ pub fn hello_hash(count: i32) -> JsValue {
 
     let js_result: JsValue = JsValue::from_serde(&data).unwrap();
 
-    // OK(js_result)
-
-    js_result
-    
+    OK(js_result)    
 
 }
 
