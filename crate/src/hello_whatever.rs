@@ -40,7 +40,7 @@ pub fn hello_hash(count: i32) -> Result<JsValue, JsValue> {
 
     let js_result: JsValue = JsValue::from_serde(&data).unwrap();
 
-    OK(js_result)    
+    Ok(js_result)    
 
 }
 
