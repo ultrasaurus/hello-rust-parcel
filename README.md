@@ -3,6 +3,25 @@
 * `npm run start` -- Serve the project locally for
   development at `http://localhost:1234`.
 
+In the console, you should see the following:
+
+```
+hello: Hello world!
+index.js:8 hello_array: Array(4)
+index.js:11 hello_hash: Object
+index.js:13 wasm.hello('world'): Hello world!
+index.js:18 TypeError: Cannot read property 'length' of undefined
+    at passStringToWasm (wasm-loader.js:48)
+    at Object.__exports.hello (wasm-loader.js:101)
+    at Object.parcelRequire.js/index.js.../crate/Cargo.toml (index.js:15)
+    at newRequire (js.00a46daa.js:47)
+    at localRequire (js.00a46daa.js:53)
+    at wasm-loader.js:220
+parcelRequire.js/index.js.../crate/Cargo.toml @ index.js:18
+```
+
+The error is intentional.  It illustrates how to catch a Rust error in JavaScript.
+
 * `npm run build` -- Bundle the project (in production mode)
 
 ##
