@@ -7,12 +7,32 @@ In the console, you should see the following:
 
 ```
 hello: Hello world!
+hello_array: (4) ["0", "1", "2", "3"]
 DomDistiller debug level: 0   # from template, not sure what this is
 ```
 
 ## Production build
 
 Building for production also provides output about size
+
+## with js-sys (and hello_array example)
+
+~9K bigger
+
+```
+$ npm run build
+
+> create-rust-parcel@0.0.2 build /Users/sallen/src/rust/hello-rust-parcel
+> parcel build index.html
+
+✨  Built in 1.52s.
+
+dist/hello_rust_parcel_bg.63a4eb26.wasm    49.64 KB     14ms
+dist/js.d2549bce.js.map                    14.42 KB      5ms
+dist/js.d2549bce.js                         7.25 KB    1.39s
+dist/Cargo.420553d3.toml                    1.09 KB    721ms
+dist/index.html                              228 B      4ms
+```
 
 
 ### without web-sys
