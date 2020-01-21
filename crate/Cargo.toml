@@ -27,15 +27,15 @@ console_error_panic_hook = { version = "0.1.5", optional = true }
 # (tested with rust v1.31.1).
 wee_alloc = { version = "0.4.2", optional = true }
 
-[dependencies.web-sys]
-version = "0.3.6"
-features = [
-  'Document',
-  'Element',
-  'HtmlElement',
-  'Node',
-  'Window',
-]
+# [dependencies.web-sys]
+# version = "0.3.6"
+# features = [
+#   'Document',
+#   'Element',
+#   'HtmlElement',
+#   'Node',
+#   'Window',
+# ]
 
 [features]
 default = ["console_error_panic_hook"]
