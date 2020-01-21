@@ -1,2 +1,2 @@
-import module from '../crate/Cargo.toml'
-module.run();
+import wasm from '../crate/Cargo.toml'
+wasm.hello();

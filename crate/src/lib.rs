@@ -29,7 +29,7 @@ cfg_if! {
 
 // Called by our JS entry point to run the example
 #[wasm_bindgen]
-pub fn run() -> Result<(), JsValue> {
+pub fn hello() -> Result<(), JsValue> {
     // If the `console_error_panic_hook` feature is enabled this will set a panic hook, otherwise
     // it will do nothing.
     set_panic_hook();

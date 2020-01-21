@@ -1,3 +1,26 @@
+
+
+## Production build
+
+Building for production also provides output about size
+
+```
+$ npm run build
+
+> create-rust-parcel@0.0.2 build /Users/sallen/src/rust/hello-rust-parcel
+> parcel build index.html
+
+✨  Built in 2.25s.
+
+dist/hello_rust_parcel_bg.fcada054.wasm    48.18 KB     11ms
+dist/js.c5d8a472.js.map                    16.29 KB      6ms
+dist/js.c5d8a472.js                         9.22 KB    1.79s
+dist/Cargo.430570ab.toml                    1.19 KB    636ms
+dist/index.html                               228 B    899ms
+```
+
+
+
 ## Dev Setup
 
 Node/npm versions (`nvm install 12.14.1`):
