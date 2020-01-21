@@ -8,12 +8,32 @@ In the console, you should see the following:
 ```
 hello: Hello world!
 hello_array: (4) ["0", "1", "2", "3"]
+hello_hash: {h: {…}, name: "My Book Store"}
 DomDistiller debug level: 0   # from template, not sure what this is
 ```
 
 ## Production build
 
 Building for production also provides output about size
+
+## with serde (and hello_hash example)
+
+adds ~17K
+
+```
+$ npm run build
+
+> create-rust-parcel@0.0.2 build /Users/sallen/src/rust/hello-rust-parcel
+> parcel build index.html
+
+✨  Built in 1.21s.
+
+dist/hello_rust_parcel_bg.7f113218.wasm    66.08 KB      9ms
+dist/js.2a83661f.js.map                    14.98 KB      7ms
+dist/js.2a83661f.js                         7.58 KB    1.22s
+dist/Cargo.9e0558f4.toml                    1.18 KB    580ms
+dist/index.html                              228 B       4ms
+```
 
 ## with js-sys (and hello_array example)
 
