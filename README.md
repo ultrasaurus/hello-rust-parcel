@@ -6,10 +6,18 @@
 In the console, you should see the following:
 
 ```
+DomDistiller debug level: 0   # from template, not sure what this is
 hello: Hello world!
 hello_array: (4) ["0", "1", "2", "3"]
 hello_hash: {h: {…}, name: "My Book Store"}
-DomDistiller debug level: 0   # from template, not sure what this is
+hello requires a parameter (error caught successfully)
+ TypeError: Cannot read property 'length' of undefined
+    at passStringToWasm0 (wasm-loader.js:77)
+    at Object.__exports.hello (wasm-loader.js:118)
+    at Object.parcelRequire.js/index.js.../crate/Cargo.toml (index.js:18)
+    at newRequire (js.00a46daa.js:47)
+    at localRequire (js.00a46daa.js:53)
+    at wasm-loader.js:240
 ```
 
 ## Production build
