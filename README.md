@@ -1,4 +1,14 @@
+## Dev
 
+* `npm run start` -- Serve the project locally for
+  development at `http://localhost:1234`.
+
+In the console, you should see the following:
+
+```
+hello: Hello world!
+DomDistiller debug level: 0   # from template, not sure what this is
+```
 
 ## Production build
 

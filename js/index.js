@@ -1,2 +1,4 @@
 import wasm from '../crate/Cargo.toml'
-wasm.hello();
+
+var greeting = wasm.hello("world");
+console.log('hello:', greeting);
