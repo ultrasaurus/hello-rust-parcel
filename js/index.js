@@ -9,8 +9,15 @@ try {
 
   var h = wasm.hello_hash(3);
   console.log("hello_hash:", h);
-
 }
 catch(error) {
   console.error(error);
+}
+
+try {
+  var greeting = wasm.hello();
+  console.log('hello:', greeting);
+}
+catch(error) {
+  console.log("hello requires a parameter (error caught successfully)\n", error);
 }
