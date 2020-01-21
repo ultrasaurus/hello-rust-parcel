@@ -1,11 +1,11 @@
 [package]
-authors = ["The RustWasm Developers"]
+authors = ["Sarah Allen", "The RustWasm Developers"]
 categories = ["wasm"]
 description = "My super awesome Rust, WebAssembly, and Parcel project!"
 license = "Apache-2.0/MIT"
-name = "rust-parcel"
+name = "hello-rust-parcel"
 readme = "./README.md"
-repository = "https://github.com/rustwasm/rust-parcel-template"
+repository = "https://github.com/ultrasaurus/hello-rust-parcel"
 version = "0.1.0"
 
 [lib]

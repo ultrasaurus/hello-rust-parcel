@@ -1,22 +1,36 @@
-# `rust-parcel-template`
+## Dev Setup
 
-**Kickstart your Rust, WebAssembly, and Parcel project!**
+Node/npm versions (`nvm install 12.14.1`):
+````
+$ npm --version
+6.13.4
+$ node --version
+v12.14.1
+````
 
-This template comes pre-configured with all the boilerplate for compiling Rust
-to WebAssembly and hooking into a Parcel build pipeline.
-
-* `npm run start` -- Serve the project locally for
-  development at `http://localhost:1234`.
-
-* `npm run build` -- Bundle the project (in production mode)
-
-
-## Using This Template
+Created using [rust-parcel-template]
 
 ```sh
-cargo install wasm-pack
+cargo install wasm-pack --force  ## force option upgrades if already installed
 ```
 
+
 ```sh
-npm init rust-parcel my-app
+npm init rust-parcel hello-rust-parcel
+# npx: installed 1 in 1.721s
+# 🦀Rust + 🕸 WebAssembly + 📦Parcel = ❤️
+# Installed dependencies ✅
+cd hello-rust-parcel
+npm run start
+# > create-rust-parcel@0.0.2 start /Users/sallen/src/rust/hello-rust-parcel
+# > parcel index.html
+# Server running at http://localhost:1234 
+# ⠋ Building Cargo.toml...
 ```
+
+The first time you run this it is **very slow** because it needs to update all
+the dependencies.
+
+Browser window should show "Hello from Rust, WebAssembly, and Parcel!"
+where innerHTML is set from Rust/wasm.
+
