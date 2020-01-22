@@ -1,7 +1,8 @@
 // arbitrary data with Serde
 // https://rustwasm.github.io/docs/wasm-bindgen/reference/arbitrary-data-with-serde.html
 use wasm_bindgen::prelude::*;
-use set_panic_hook;
+use crate::set_panic_hook;
+use serde::Serialize;
 use std::collections::HashMap;
 
 #[derive(Serialize)]
@@ -11,7 +12,7 @@ pub struct BookStoreData {
 }
 
 #[wasm_bindgen]
-pub fn hello_hash(count: i32) -> Result<JsValue, JsValue> {
+pub fn hello_hash(_count: i32) -> Result<JsValue, JsValue> {
     set_panic_hook();
     // https://doc.rust-lang.org/std/collections/struct.HashMap.html
     let mut book_reviews = HashMap::new();

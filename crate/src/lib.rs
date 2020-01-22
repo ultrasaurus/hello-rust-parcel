@@ -2,11 +2,6 @@
 extern crate cfg_if;
 
 #[macro_use]
-extern crate serde_derive;
-
-extern crate wasm_bindgen;
-extern crate js_sys;
-
 mod hello;
 mod hello_array;
 mod hello_hash;

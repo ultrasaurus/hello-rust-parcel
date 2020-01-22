@@ -1,7 +1,7 @@
 extern crate js_sys;
 
 use wasm_bindgen::prelude::*;
-use set_panic_hook;
+use crate::set_panic_hook;
 
 #[wasm_bindgen]
 pub fn hello_array(count: i32) -> Result<js_sys::Array, JsValue> {

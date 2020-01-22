@@ -7,6 +7,7 @@ name = "hello-rust-parcel"
 readme = "./README.md"
 repository = "https://github.com/ultrasaurus/hello-rust-parcel"
 version = "0.1.0"
+edition = "2018"
 
 [lib]
 crate-type = ["cdylib"]
@@ -26,8 +27,7 @@ console_error_panic_hook = { version = "0.1.5", optional = true }
 # (tested with rust v1.31.1).
 wee_alloc = { version = "0.4.2", optional = true }
 js-sys = "0.3.35"
-serde = "1.0.104"
-serde_derive = "1.0.104"
+serde = { version = "1.0", features = ["derive"] }
 
 [dependencies.wasm-bindgen]
 version = "^0.2"

@@ -1,5 +1,5 @@
 use wasm_bindgen::prelude::*;
-use set_panic_hook;
+use crate::set_panic_hook;
 
 // Called by our JS entry point to run the example
 #[wasm_bindgen]
