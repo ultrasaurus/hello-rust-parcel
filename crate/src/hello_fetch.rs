@@ -35,7 +35,7 @@ pub struct Signature {
 
 // Called by our JS entry point to run the example
 #[wasm_bindgen]
-pub async fn hello_fetch(_name: &str) -> Result<JsValue, JsValue> {
+pub async fn hello_fetch(_name: String) -> Result<JsValue, JsValue> {
     set_panic_hook();
     
     let mut opts = RequestInit::new();
