@@ -21,3 +21,7 @@ try {
 catch(error) {
   console.log("hello requires a parameter (error caught successfully)\n", error);
 }
+
+wasm.async_hello().then(result => {
+  console.log("async_hello:", result)
+});

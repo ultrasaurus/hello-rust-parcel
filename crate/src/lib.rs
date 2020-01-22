@@ -1,7 +1,7 @@
 #[macro_use]
 extern crate cfg_if;
 
-#[macro_use]
+mod hello_async;
 mod hello;
 mod hello_array;
 mod hello_hash;
