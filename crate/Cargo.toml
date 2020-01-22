@@ -26,6 +26,7 @@ console_error_panic_hook = { version = "0.1.5", optional = true }
 # allocator, however. Also as of wee_alloc v0.4.2, does not yet work on stable
 # (tested with rust v1.31.1).
 wee_alloc = { version = "0.4.2", optional = true }
+wasm-bindgen-futures = "0.4.8"
 js-sys = "0.3.35"
 serde = { version = "1.0", features = ["derive"] }
 
@@ -33,5 +34,17 @@ serde = { version = "1.0", features = ["derive"] }
 version = "^0.2"
 features = ["serde-serialize"]
 
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+  'Headers',
+  'Request',
+  'RequestInit',
+  'RequestMode',
+  'Response',
+  'Window',
+]
+
 [features]
 default = ["console_error_panic_hook"]
+
